@@ -1,0 +1,19 @@
+
+```bash
+yarn cypress:verify
+yarn cypress:open
+## Run a test-suite in cypress ... this will destroy the coverage folder and add the new test results to the coverage folder.
+open coverage/lcov-report/index.html 
+
+yarn cypress:open
+## Run a different test/test-suite in cypress and see the coverage folder update
+open coverage/lcov-report/index.html 
+```
+
+You could also consider using: 
+```bash
+npx cypress run
+```
+
+note, this seems to have a bug that cypress run will update code coverage if new lines were hit.
+but it will not decrease code coverage if some of those tests were deleted and it only has 1 test to run.
